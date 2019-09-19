@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Getting non tagged conversations from Intercom">
+    <meta name="author" content="Ali Basharat">
+    <link rel="icon" href="/img/fav.png">
+
+    <title>Intercom Tagging - D1</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="https://kit.fontawesome.com/323c28ab5d.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2>Intercom Tagging</h2>
+        <p class="lead">Get all non tagged conversations from Intercom</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-9 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between bread align-items-center mb-3" style="display: none !important;">
+            <span class="text-muted">Non tagged chats</span>
+            <span class="badge badge-secondary badge-pill">0</span>
+          </h4>
+            <div class="notice" style="margin-top: 40px;">
+                <i class="fab fa-intercom" style="font-size: 190px; color: #c5c5c5;"></i>
+              <h1 style="color:#c5c5c5;">Welcome to Intercom Tagging</h1>
+              <h2 style="color:#c5c5c5;">Add an email to start</h2>
+            </div>
+              <div class="load-anime" style="display:none">
+                  <div class="timeline-item">
+                      <div class="animated-background">
+                          <div class="background-masker header-top"></div>
+                          <div class="background-masker header-right"></div>
+                          <div class="background-masker header-bottom"></div>
+                          <div class="background-masker subheader-right"></div>
+                          <div class="background-masker subheader-bottom"></div>
+                          <div class="background-masker content-top"></div>
+                          <div class="background-masker content-first-end"></div>
+                          <div class="background-masker content-second-line"></div>
+                          <div class="background-masker content-second-end"></div>
+                          <div class="background-masker content-third-line"></div>
+                          <div class="background-masker content-third-end"></div>
+                      </div>
+                  </div>
+                  <div class="timeline-item">
+                      <div class="animated-background">
+                          <div class="background-masker header-top"></div>
+                          <div class="background-masker header-right"></div>
+                          <div class="background-masker header-bottom"></div>
+                          <div class="background-masker subheader-right"></div>
+                          <div class="background-masker subheader-bottom"></div>
+                          <div class="background-masker content-top"></div>
+                          <div class="background-masker content-first-end"></div>
+                          <div class="background-masker content-second-line"></div>
+                          <div class="background-masker content-second-end"></div>
+                          <div class="background-masker content-third-line"></div>
+                          <div class="background-masker content-third-end"></div>
+                      </div>
+                  </div>
+                  <div class="timeline-item">
+                      <div class="animated-background">
+                          <div class="background-masker header-top"></div>
+                          <div class="background-masker header-right"></div>
+                          <div class="background-masker header-bottom"></div>
+                          <div class="background-masker subheader-right"></div>
+                          <div class="background-masker subheader-bottom"></div>
+                          <div class="background-masker content-top"></div>
+                          <div class="background-masker content-first-end"></div>
+                          <div class="background-masker content-second-line"></div>
+                          <div class="background-masker content-second-end"></div>
+                          <div class="background-masker content-third-line"></div>
+                          <div class="background-masker content-third-end"></div>
+                      </div>
+                  </div>
+                  <div class="timeline-item">
+                      <div class="animated-background">
+                          <div class="background-masker header-top"></div>
+                          <div class="background-masker header-right"></div>
+                          <div class="background-masker header-bottom"></div>
+                          <div class="background-masker subheader-right"></div>
+                          <div class="background-masker subheader-bottom"></div>
+                          <div class="background-masker content-top"></div>
+                          <div class="background-masker content-first-end"></div>
+                          <div class="background-masker content-second-line"></div>
+                          <div class="background-masker content-second-end"></div>
+                          <div class="background-masker content-third-line"></div>
+                          <div class="background-masker content-third-end"></div>
+                      </div>
+                  </div>
+              </div>
+              <ul class="list-group mb-3"></ul>
+        </div>
+        <div class="col-md-3 order-md-1">
+          <h4 class="mb-3">Choose the details</h4>
+          <form id="form" class="needs-validation" novalidate>
+
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@dynatrace.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address (it should end with Dynatrace.com).
+              </div>
+            </div>
+            <div class="mb-3">
+                <label>Order by</label>
+                <select class="form-control" id="order">
+                  <option value="updated_at">Updated at</option>
+                  <option value="created_at">Created at</option>
+                </select>
+              </div>
+            <div class="mb-3">
+                <label>Sort by</label>
+                <select class="form-control" id="sort">
+                    <option value="desc">Desc</option>
+                  <option value="asc">Asc</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                  <label>Chat status</label>
+                  <select class="form-control" id="state">
+                    <option value="all">All</option>
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                    <option value="snoozed">Snoozed</option>
+                  </select>
+                </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+          </form>
+          <footer class="pt-3 text-muted text-center text-small">
+              <p class="mb-1">&copy; 2019 BCN Squad</p>
+            </footer>
+        </div>
+      </div>
+
+    </div>
+    <script src="/js/script-fn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
