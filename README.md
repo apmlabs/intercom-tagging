@@ -13,6 +13,5 @@ Intercom Tagging: As most of you are aware that it’s impossible to search for 
 Multiple steps are required to scroll through all your chats to check If It is tagged or un-tagged, so now you only have to focus on un-tagged chats rather than going through all your conversations.
 # 2. Security:
 The app is accessible only within the office network.
-GitHub repository is set to private if you are interested in viewing it please let me know.
 
 Lastly, I would like to collect thoughts and feedback on this to Improve it further so that we can have a quick call where I can explain technical aspects of the tool. In the meantime Happy Tagging guys
